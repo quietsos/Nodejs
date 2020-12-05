@@ -1,0 +1,12 @@
+Werbserver: A web server is a software program which serves web pages to web users(browsers). 
+
+
+    To access web pages of anyt web application you need  a 
+    web sever. The web server willl handle all the http requests for the web application.
+
+    Eg: IIL is a web servr for ASP.NET web application and 
+    Apach is a web server for PHP or Java web applications
+
+    Node.js provides  capabilities to create your own web server which will handle 
+    HTTP requests asynchronously. YOu can use IIS or Apache to 
+    run NOde.js web application but it is recommended to use NOde.js webserver.

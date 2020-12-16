@@ -225,7 +225,7 @@
         <div class="wave -three"></div>
 
         <div  id="weathercon">
-            <i class="fas fa-sun" style="color: #eccc68;"></i>
+            <!-- <i class="fas fa-sun" style="color: #eccc68;"></i> -->
 
         </div>
 
@@ -235,8 +235,8 @@
                 {%location%},{%country%}
             </h2>
             <p id="date"></p>
-            <h1 class="temp"> {%tempval%}</h1>
-            <h2 class="tempmin_max">  {%tempmin%} | {%tempmax%}</h2>
+            <h1 class="temp"> {%tempval%}&deg;C</h1>
+            <h2 class="tempmin_max">  {%tempmin%}&deg;C | {%tempmax%}&deg;C</h2>
 
 
         </div>
@@ -248,7 +248,22 @@
         const curDate = document.getElementById("date");
         let weathercon = document.getElementById("weathercon");
 
-        const tempStatus = "clouds";
+        const tempStatus = "{%tempstatus%}";
+
+        if(tempStatus == "Sunny"){
+            weathercon.innerHTML = "<i class='fas fa-sun' style='color: #eccc68;'></i>";
+
+        }
+        else if(tempStatus == "Clouds"){
+            weathercon.innerHTML = "<i class='fas fa-cloud' style='color: #f1f2f6;'></i>";
+        }
+        else if(tempStatus == "Rainy"){
+            weathercon.innerHTML = "<i class='fas fa-rain' style='color: #a4b0be;'></i>";
+        }
+
+        else{
+            weathercon.innerHTML="<i class='fas fa-cloud' style='color: #fff;'></i>";
+        }
 
         const getCurrentDay = () =>{
             var weekday = new Array(7);
